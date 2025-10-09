@@ -1,5 +1,5 @@
 ---
-name: verify-doc
+name: verify-docs
 description: "문서 품질, 정확성, 완전성, 사용성을 체계적으로 검증"
 category: quality
 complexity: advanced
@@ -7,7 +7,7 @@ mcp-servers: []
 personas: [documentation-reviewer]
 ---
 
-# /doc-verification-orchestration - 문서 검증 및 품질 보증
+# /verify-docs - 문서 검증 및 품질 보증
 
 ## 트리거
 - 문서 품질 검토 요청
@@ -18,7 +18,7 @@ personas: [documentation-reviewer]
 
 ## 사용법
 ```
-/doc-verification-orchestration [문서경로|디렉토리경로] [--focus accuracy|completeness|clarity|structure|usability] [--strict] [--parallel]
+/verify-docs [문서경로|디렉토리경로] [--focus accuracy|completeness|clarity|structure|usability] [--strict] [--parallel]
 ```
 
 ## 오케스트레이션 모드
@@ -213,28 +213,28 @@ function conceptualExample() { ... }
 
 ### API 문서 검증
 ```
-/doc-verification-orchestration docs/api/authentication.md --focus accuracy
+/verify-docs docs/api/authentication.md --focus accuracy
 # 소스 코드와 대조하여 모든 API 엔드포인트, 매개변수, 응답 타입 검증
 # 구체적인 파일:라인 참조와 함께 불일치 사항 리포트
 ```
 
 ### 포괄적 문서 감사
 ```
-/doc-verification-orchestration README.md --strict
+/verify-docs README.md --strict
 # 5차원 검증 전체 수행 (정확성, 완전성, 명확성, 구조, 사용성)
 # 품질 점수 및 분류된 이슈가 포함된 상세 JSON 리포트 생성
 ```
 
 ### 코드 예제 검증
 ```
-/doc-verification-orchestration docs/guides/getting-started.md --focus accuracy
+/verify-docs docs/guides/getting-started.md --focus accuracy
 # 모든 코드 예제가 문법적으로 정확하고 실행 가능한지 검증
 # 실제 소스 코드와 import 및 API 사용 교차 참조
 ```
 
 ### 다중 문서 검증 (병렬 오케스트레이션)
 ```
-/doc-verification-orchestration docs/ --parallel
+/verify-docs docs/ --parallel
 # docs/ 디렉토리 내 모든 .md 파일 탐색
 # 각 문서마다 병렬 Task 에이전트 실행 (최대 5개 동시)
 # 각 에이전트가 할당된 문서를 독립적으로 검증
@@ -244,7 +244,7 @@ function conceptualExample() { ... }
 
 ### 병렬 실행 흐름 예제
 ```
-입력: /doc-verification-orchestration docs/api/ --parallel
+입력: /verify-docs docs/api/ --parallel
 
 1. Glob "docs/api/**/*.md" → [auth.md, users.md, payments.md, webhooks.md]
 

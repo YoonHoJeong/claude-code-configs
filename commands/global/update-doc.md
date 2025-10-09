@@ -51,7 +51,7 @@ Task({
 ${생성된_또는_업데이트된_문서_목록}
 
 ## 검증 지침
-./templates/verify-doc.md 파일의 검증 체크리스트를 따라 문서를 검증하세요.
+./templates/verify-doc.template.md 파일의 검증 체크리스트를 따라 문서를 검증하세요.
 
 검증 시 반드시:
 1. 실제 소스 코드 파일을 Read tool로 읽어 비교
