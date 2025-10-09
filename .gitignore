@@ -1,0 +1,61 @@
+# Runtime & Session Data
+history.jsonl
+.update_check
+
+# Debug & Development
+debug/
+shell-snapshots/
+file-history/
+
+# Project-Specific Data (동적으로 생성되는 프로젝트별 데이터)
+projects/*/memory/
+projects/*/cache/
+projects/*/.serena/
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# IDE Connection Data (contains auth tokens)
+ide/
+
+# Temporary & Cache
+*.tmp
+.cache/
+tmp/
+
+# Logs
+logs/
+*.log
+
+# Stats & Analytics (선택사항 - 통계를 추적하고 싶다면 제외)
+statsig/
+
+# Backups (선택사항 - 백업을 Git으로 관리하고 싶다면 제외)
+backups/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Sensitive Data
+*.key
+*.pem
+*.env
+secrets/
+credentials/
+
+# SuperClaude
+.superclaude-metadata.json
+
+# Projects
+projects/
+
+# Todos
+todos/
+
+# Plugins
+plugins/
